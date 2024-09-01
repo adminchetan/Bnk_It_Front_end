@@ -1,0 +1,43 @@
+h5,p{
+    padding-left: 20px;
+}
+
+.imgfoot{
+    padding-left: 15px;
+}
+
+h5{
+    text-decoration: underline;
+}
+/* Footer Styles */
+.footer {
+    background-color: #343a40; /* Change this to your desired background color */
+    color: #ffffff;
+    padding: 40px 0;
+}
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #ffc107;
+}
+.footer p {
+    margin-bottom: 0.5rem;
+}
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffc107;
+    border-radius: 5px;
+}
+.footer-copy {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #adb5bd;
+}

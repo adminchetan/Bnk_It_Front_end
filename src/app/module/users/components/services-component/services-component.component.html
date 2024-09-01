@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <h2 class="mt-4">Service Basic Information</h2>
+    <div class="table-responsive">
+      <div *ngIf="isLoading;">
+        <app-loading></app-loading>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead class="table-info">
+          <tr>
+            <th>#</th>
+            <th>Buisness Name</th>
+            <th>ClientPrimaryContact</th>
+            <th>HostingType</th>
+            <th>Registration</th>
+            <th>Expiary</th>
+            <th>Validity (days)</th>
+            <th>Remaining Days</th> <!-- New column header -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let server of ServerDetails;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{server.clintName}}</td>
+            <td>{{server.clientPrimaryContact}}</td>
+            <td>{{server.serverHostingName}}</td>
+            <td>{{server.serverRegistration}}</td>
+            <td>{{server.severExpiary}}</td>
+            <td>{{server.serverValidity}}</td>
+            <td>{{ getRemainingDays(server.severExpiary) }}</td> <!-- Display remaining days -->
+  
+          </tr>
+           <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <h2 class="mt-4">Domains Basic Information</h2>
+    <div class="table-responsive">
+      <div *ngIf="isLoading;">
+        <app-loading></app-loading>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead class="table-danger">
+          <tr>
+            <th>#</th>
+            <th>Buisness Name</th>
+            <th>ClientPrimaryContact</th>
+            <th>Registered Domain</th>
+            <th>Registration</th>
+            <th>Expiary</th>
+            <th>Validity</th>
+            <th>Remaining Days</th> <!-- New column header -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let domains of DomainsDetails; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{domains.clintName}}</td>
+            <td>{{domains.clientPrimaryContact}}</td>
+            <td>{{domains.domainName}}</td>
+            <td>{{domains.domeinRegistration}}</td>
+            <td>{{domains.domainExpiary}}</td>
+            <td>{{domains.domainValidity}}</td>
+            <td>{{ getRemainingDays(domains.domainExpiary) }}</td> <!-- Display remaining days -->
+  
+          </tr>
+           <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </div>

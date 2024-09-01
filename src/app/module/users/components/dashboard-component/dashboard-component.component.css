@@ -1,0 +1,128 @@
+/* Top row styles */
+fa{
+  margin: 0 5px 0 5px;
+}
+
+
+.top-row {
+  border-bottom: 2px solid orange; /* Orange bottom border */
+  background-color: rgb(255, 255, 255); /* White background */
+  position: relative; /* Ensure relative positioning for z-index */
+  z-index: 1100; /* Higher z-index to keep toggle button above */
+}
+
+.top-row .toggle-btn {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px; /* Add padding to make clickable area larger */
+}
+
+/* Left navigation container */
+.left-nav-container {
+  width: 210px; /* Width of the navigation container */
+  background-color: #fff; /* White background */
+  transition: transform 0.6s ease; /* Smooth transition for transform */
+  transform: translateX(-100%); /* Initially off-screen */
+  position: fixed; /* Fixed position to keep it fixed while scrolling */
+  margin-top: 20px; /* Space from the top */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 900; /* Lower z-index to keep below top row */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+}
+
+.left-nav-container.active {
+  transform: translateX(0); /* Bring navigation on-screen */
+}
+
+/* Main content area */
+.content {
+  padding: 20px; /* Padding inside the content area */
+  transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
+}
+
+.content.active {
+  margin-left: 200px; /* Adjusted margin-left when navigation is active */
+}
+
+/* Counting cards */
+.counting-cards {
+  margin-top: 20px; /* Margin space for the counting cards section */
+}
+
+.card {
+  background-color: #f0f0f0; /* Default card background color */
+  padding: 5px; /* Padding inside each card */
+  margin-bottom: 10px; /* Bottom margin between cards */
+}
+
+.card h4 {
+  font-size: 16px; /* Card title font size */
+  margin-bottom: 5px; /* Bottom margin for title */
+  font-weight: bolder;
+}
+
+.card p {
+  font-size: 14px; /* Card description font size */
+  color: #ffffff; /* Text color */
+  margin-bottom: 5px; /* Bottom margin for description */
+  
+}
+
+.card .count {
+  font-size: 24px; /* Count number font size */
+}
+
+.card-blue {
+  background-color: #297abd; /* Blue card background */
+  color: white; /* Text color */
+}
+
+.card-green {
+  background-color: #9ccc65; /* Green card background */
+  color: white; /* Text color */
+}
+
+.card-orange {
+  background-color: #ffa726; /* Orange card background */
+  color: white; /* Text color */
+}
+
+
+
+/* Media query for small screens */
+@media (max-width: 991px) {
+  .left-nav-container {
+    transform: translateX(-100%); /* Move navigation off-screen by default */
+  }
+
+  .left-nav-container.active {
+    transform: translateX(0); /* Bring navigation on-screen when active */
+  }
+
+  .content.active {
+    margin-left: 0; /* Reset margin-left when navigation is active */
+  }
+}
+
+
+
+/*/Notification /*/
+.icon-container {
+  position: relative;
+  display: inline-block;
+
+}
+
+.icon-container .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 8px;
+  padding: 5px;
+}
+

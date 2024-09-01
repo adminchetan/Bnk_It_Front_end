@@ -1,0 +1,71 @@
+/* Add a bit of padding and margin to the container */
+.container-fluid {
+  padding: 0 15px;
+}
+
+/* Style the card header */
+.card-header {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #ffffff;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Style the card body */
+.card-body {
+  padding: 1rem;
+}
+
+/* Style the form label */
+.form-label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Style the select element */
+.form-select {
+  font-size: 1rem;
+  padding: 0.55rem;
+}
+
+/* Style the table */
+.table {
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+}
+
+/* Add custom padding to the table cells */
+.table tr{
+  padding: 1rem;
+}
+
+/* Style the table headers */
+.table thead th {
+  background-color: #f8f9fa; /* Bootstrap light color */
+  font-weight: bold;
+}
+
+/* Style the table rows on hover */
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style the checkboxes */
+.form-check-input {
+  cursor: pointer;
+}
+
+/* Style the save button */
+.btn-success {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+/* Add some margin to the footer */
+.card-footer {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+

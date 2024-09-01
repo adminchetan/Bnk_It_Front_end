@@ -1,0 +1,45 @@
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card shadow-sm border-light">
+        <div class="card-header text-center bg-primary text-white">
+          <h2 class="mb-0">User Roles Mapper</h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="mb-4">
+              <label for="user-select" class="form-label">Select a User:&nbsp;</label>
+              <select id="user-select" class="form-select" (change)="onUserSelect($event)">
+                <option value="" selected disabled>Select user</option>
+                <option *ngFor="let user of users" [value]="user.id">{{ user.serachString }}</option>
+              </select>
+            </div>
+          </form>
+          <div class="table-responsive mt-4">
+            <table class="table table-striped table-bordered table-hover">
+              <thead class="thead-light">
+            
+                  <th *ngFor="let column of Tablecolumns">{{ column }}</th>
+          
+              </thead>
+              <tbody>
+                <tr *ngIf="roleData">
+                  <td><input type="checkbox" [(ngModel)]="roleData.adminDashboard" ></td>
+                  <td><input type="checkbox" [(ngModel)]="roleData.adminRoleManager" ></td>
+                  <td><input type="checkbox" [(ngModel)]="roleData.adminUserCreation" ></td>
+                  <td><input type="checkbox" [(ngModel)]="roleData.clientdashboard"></td>
+                  <td><input type="checkbox" [(ngModel)]="roleData.clientUserCreation" ></td>
+                  <td><input type="checkbox" [(ngModel)]="roleData.adminApproval"></td>
+                  <td><input type="checkbox" [(ngModel)]="roleData.clientPayment" ></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <button type="button" (click)="onSaveClick()" class="btn btn-success">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+
+<div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header custom-header">
+          Client Details
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>AccountStatus</th>
+                            <th>ClientName</th>
+                            <th>Description</th>
+                            <th>BuiisnessEmail</th>
+                            <th>PrimaryContactName</th>
+                            <th>PrimaryContactEmail</th>
+                            <th>PrimaryContactCountry</th>
+                            <th>PrimaryContactState</th>
+                            <th>PrimaryContactCity</th>
+                            <th>PrimaryContactAddress</th>
+                            <th>Username</th>
+                            <th>createdOn</th>
+                            <th>lastLogin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let service of ClientInformation">
+                        <td>{{ service.clientId }}</td>
+                        <td [ngStyle]="{
+                            'color': service.accountStatus === 0 ? 'White' : 
+                                     service.accountStatus === 1 ? 'White' : 
+                                     service.accountStatus === 2 ? 'White' : 'inherit',
+                            'background-color': service.accountStatus === 0 ? 'red' : 
+                                                 service.accountStatus === 1 ? 'Orange' : 
+                                                 service.accountStatus === 2 ? 'Green' : 'inherit'
+                          }">
+                            {{ getAccountStatusText(service.accountStatus) }}
+                          </td>
+                        <td>{{ service.clientName }}</td>
+                        <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ service.description }}</td>
+                        <td>{{ service.clientBuiisnessEmail }}</td>
+                        <td>{{ service.primaryContactName }}</td>
+                        <td>{{ service.primaryContactEmail }}</td>
+                         <td>{{ service.primaryContactCountry }}</td>
+                         <td>{{ service.primaryContactState }}</td>
+                         <td>{{ service.primaryContactCity }}</td>
+                         <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ service.primaryContactAddress }}</td>
+                         <td>{{ service.username }}</td>
+                         <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ service.createdOn }}</td>
+                         <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ service.lastLogin }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header custom-header">
+            Card Heading
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john.doe</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jane</td>
+                            <td>Smith</td>
+                            <td>jane.smith</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+  
+  
+    </div>
+  
+  </div>
+  
+  

@@ -1,0 +1,79 @@
+<section id="product-section">
+  <div class="alert alert-info text-center" role="alert" style="margin-top: 20px;">
+    <h2 class="mb-4" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 2.5rem; color: #007bff; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 2px rgba(0,0,0,0.5);">Request a Product</h2>
+    <p>Once you raise a request we will contact you over the email</p>
+  </div>
+  <div class="container mt-5">
+    <h2>Request a Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" class="form-control" formControlName="email">
+        <div *ngIf="getFormControl('email')?.invalid && (getFormControl('email')?.dirty || getFormControl('email')?.touched)">
+          <small class="text-danger" *ngIf="getFormControl('email')?.errors?.['required']">Email is required.</small>
+          <small class="text-danger" *ngIf="getFormControl('email')?.errors?.['email']">Invalid email format.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input id="mobile" type="text" class="form-control" formControlName="mobile">
+        <div *ngIf="getFormControl('mobile')?.invalid && (getFormControl('mobile')?.dirty || getFormControl('mobile')?.touched)">
+          <small class="text-danger" *ngIf="getFormControl('mobile')?.errors?.['required']">Mobile number is required.</small>
+          <small class="text-danger" *ngIf="getFormControl('mobile')?.errors?.['pattern']">Invalid mobile number.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="product">Product</label>
+        <input id="product" type="text" class="form-control" formControlName="product" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredProducts | async" [value]="option.name">
+            {{ option.name }}
+          </mat-option>
+        </mat-autocomplete>
+        <div *ngIf="getFormControl('product')?.invalid && (getFormControl('product')?.dirty || getFormControl('product')?.touched)">
+          <small class="text-danger" *ngIf="getFormControl('product')?.errors?.['required']">Product is required.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <input id="state" type="text" class="form-control" formControlName="state" [matAutocomplete]="StatetAuto">
+        <mat-autocomplete #StatetAuto="matAutocomplete">
+          <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+            {{ state.name }}
+          </mat-option>
+        </mat-autocomplete>
+        <div *ngIf="getFormControl('state')?.invalid && (getFormControl('state')?.dirty || getFormControl('state')?.touched)">
+          <small class="text-danger">State is required.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input id="city" type="text" class="form-control" formControlName="city" [matAutocomplete]="cityAuto">
+        <mat-autocomplete #cityAuto="matAutocomplete">
+          <mat-option *ngFor="let city of filteredCities | async" [value]="city.name">
+            {{ city.name }}
+          </mat-option>
+        </mat-autocomplete>
+        <div *ngIf="getFormControl('city')?.invalid && (getFormControl('city')?.dirty || getFormControl('city')?.touched)">
+          <small class="text-danger" *ngIf="getFormControl('city')?.errors?.['required']">City is required.</small>
+          <small class="text-danger" *ngIf="getFormControl('city')?.errors?.['invalidCity']">Invalid city.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" class="form-control" formControlName="description"></textarea>
+        <div *ngIf="getFormControl('description')?.invalid && (getFormControl('description')?.dirty || getFormControl('city')?.touched)">
+          <small class="text-danger" *ngIf="getFormControl('description')?.errors?.['required']">Description is required.</small>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+ 
+</section>

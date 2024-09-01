@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <h2 class="mt-4">Hosting Detailed Information</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-info">
+          <tr>
+            <th>#</th>
+            <th>Client Name</th>
+            <th>Primary Contact</th>
+            <th>Registered to</th>
+            <th>Domain Type</th>
+            <th>NameServer 1</th>
+            <th>NameServer 2</th>
+            <th>NameServer 3</th>
+            <th>NameServer 4</th>
+            <th>MSRP(INR)</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let server of ServerDetails;let i=index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ server.clintName }}</td>
+                <td>{{ server.clientPrimaryContact }}</td>
+                <td>{{ server.name }}</td>
+                <td>{{ server.type }}</td>
+                <td>{{ server.nameserver1 }}</td>
+                <td>{{ server.nameserver2 }}</td>
+                <td>{{ server.nameserver3 }}</td>
+                <td>{{ server.nameserver4 }}</td>
+                <td>{{ server.msrp }}</td>
+
+    
+          </tr>
+           <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  

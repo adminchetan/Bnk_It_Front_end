@@ -1,0 +1,20 @@
+<!-- CardView Component -->
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="work-areas-heading">Our Working Areas</h2>
+            <hr class="work-areas-underline">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let card of cards">
+            <div class="card h-100">
+                <img src="{{ card.image }}" class="card-img-top" alt="{{ card.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="left-nav-container">
+  <nav [class.active]="isActive" class="left-nav">
+      <div class="nav-header">
+          <li><h3><span><i class='fas fa-globe'></i></span>&nbsp;Buisness Name</h3></li>
+      </div>
+      <ul class="nav-links" >
+        <li *ngFor="let menu of filteredMenus">
+            <a [routerLink]="menu.path" href="#"><span><i class="{{menu.class}}" ></i></span>&nbsp;{{menu.text}}</a>
+        </li>
+        <li>
+            <a href="#" (click)="Signout()"><span><i class='fas fa-sign-out-alt'></i></span>Logout</a>
+        </li>
+    </ul>
+
+      <!-- <ul class="nav-links">
+        <li>
+            <a [routerLink]="['/Dashboard']" href="#"><span><i class="fa fa-credit-card" ></i></span>Dashboard</a>
+        </li>
+          <li>
+              <a [routerLink]="['/Dashboard/org']"href="#"><span><i class="fa fa-address-book"></i></span>Organization</a>
+              <ul class="nested-links">
+                  <li><a href="#"><i class="fa fa-user-edit"></i> Edit Profile</a></li>
+                  <li><a href="#"><i class="fa fa-key"></i> Change Password</a></li>
+              </ul>
+          </li>
+          <li>
+              <a [routerLink]="['/Dashboard/services']" href="#"><span><i class="fa fa-cloud"></i></span>Services</a>
+              <ul class="nested-links">
+                  <li><a [routerLink]="['/Dashboard/Hosting']" href="#"><i class="fa fa-server"></i>Hosting Details</a></li>
+                  <li><a [routerLink]="['/Dashboard/Domains']" href="#"><i class="fa fa-database"></i>Domain Details</a></li>
+                  
+              </ul>
+          </li>
+          <li>
+            <a href="#"><span><i class="fa fa-credit-card"></i></span>Payments</a>
+            <ul class="nested-links">
+                <li><a [routerLink]="['/Dashboard/services']" href="#"><i class="fa fa-server"></i>Invoice</a></li>
+                <li><a href="#"><i class="fa fa-database"></i>Payment Due</a></li>
+                
+            </ul>
+        </li>
+          <li>
+              <a href="#"><span><i class="fa fa-bolt"></i></span>Analytics</a>
+              <ul class="nested-links">
+                  <li><a href="#"><i class="fa fa-chart-line"></i> Traffic Reports</a></li>
+                  <li><a href="#"><i class="fa fa-chart-pie"></i> User Insights</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#"><span><i class="fa fa-cog"></i></span>Administration</a>
+              <ul class="nested-links">
+                  <li><a href="#"><i class="fa fa-users-cog"></i> Manage Users</a></li>
+                  <li><a href="#"><i class="fa fa-users-cog"></i> Roles Manager</a></li>
+                  <li><a href="#"><i class="fa fa-tools"></i> System Settings</a></li>
+                  <li><a href="#"><i class="fa fa-tools"></i>Login History</a></li>
+                  <li><a href="#"><i class="fa fa-tools"></i>Reset Password</a></li>
+              </ul>
+          </li>
+          <li>
+            <a href="#" (click)="Signout()"><span><i class='fas fa-sign-out-alt'></i></span>Logout</a>
+        </li>
+      </ul> -->
+  </nav>
+</div>

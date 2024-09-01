@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <h2 class="mt-4">Hosting Detailed Information</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-info">
+          <tr>
+            <th>#</th>
+            <th>Client Name</th>
+            <th>Primary Contact</th>
+            <th>Server Hosting Name</th>
+            <th>Server Registration</th>
+            <th>Server Expiry</th>
+            <th>Server Validity</th>
+            <th>Server IP</th>
+            <th>Server Hosting Details</th>
+            <th>Hosting Name</th>
+            <th>Hosting Monthly Bandwidth</th>
+            <th>Hosting Storage</th>
+            <th>Hosting Email Allowed</th>
+            <th>Hosting Type</th>
+            <th>Hosting Backup</th>
+            <th>Hosting Access to Cpanel</th>
+            <th>Hosting Access to FTP</th>
+            <th>Hosting Outlet</th>
+            <th>Hosting Wholesale</th>
+            <th>Hosting CGST</th>
+            <th>Hosting SGST</th>
+            <th>Hosting MSRP</th>
+            <th>Hosting Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let server of ServerDetails;let i=index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ server.clintName }}</td>
+                <td>{{ server.clientPrimaryContact }}</td>
+                <td>{{ server.serverHostingName }}</td>
+                <td>{{ server.serverRegistration }}</td>
+                <td>{{ server.severExpiary }}</td>
+                <td>{{ server.serverValidity }}</td>
+                <td>{{ server.serverIp }}</td>
+                <td>{{ server.serverHostingDetails }}</td>
+                <td>{{ server.hostingName }}</td>
+                <td>{{ server.hostingMonthlyBandwidth }}</td>
+                <td>{{ server.hostingStorage }}</td>
+                <td>{{ server.hostingEmailAllowed }}</td>
+                <td>{{ server.hostingType }}</td>
+                <td>{{ server.hostingBackup }}</td>
+                <td>{{ server.hostingAccessToCpannel }}</td>
+                <td>{{ server.hostingAccessToFTP }}</td>
+                <td>{{ server.hostingOutlet }}</td>
+                <td>{{ server.hostingWholesale }}</td>
+                <td>{{ server.hostingCGST }}</td>
+                <td>{{ server.hostingSGST }}</td>
+                <td>{{ server.hostingMSRP }}</td>
+                <td>{{ server.hostingDescription }}</td>
+    
+          </tr>
+           <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  

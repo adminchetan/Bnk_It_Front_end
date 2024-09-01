@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <!-- Top row for toggle button -->
+  <div class="row top-row">
+    <div class="col-6 d-flex align-items-center justify-content-start">
+      <span class="toggle-btn" (click)="toggleMenu()">
+        <i style="font-size: 24px;" class="fa">&#xf0c9;</i> <!-- Adjust font size and icon as needed -->
+      </span>
+    </div>
+    <div class="col-6 d-flex align-items-center justify-content-end">
+      <div class="icon-container mt-3 pl-5 pr-5">
+        <i class='fas fa-user-alt'></i> &nbsp;{{UserName}}
+    </div>
+
+      <div class="icon-container mt-3">
+        <i class="fa fa-envelope"></i>
+        <span class="badge">7</span>
+    </div>
+
+
+    
+  </div>
+
+
+  </div>
+
+  <!-- Bottom row for navigation and content -->
+  <div class="row">
+    <!-- Column for left navigation -->
+    <div class="col-lg-3 col-md-4 col-sm-12">
+      <div class="left-nav-container" [class.active]="InitiallyShowLeftNavigation">
+        <app-leftnavigation-compoent [isActive]="InitiallyShowLeftNavigation"></app-leftnavigation-compoent>
+      </div>
+    </div>
+
+    <!-- Column for main content -->
+    <div class="col-lg-12 col-md-8 col-sm-12">
+      <main class="content" [class.active]="InitiallyShowLeftNavigation">
+        <div class="container-fluid">
+          <div class="row counting-cards">
+            
+            <!-- Example counting cards (adjust as needed) -->
+            <div class="col-md-4 col-sm-6">
+              <div class="card card-blue">
+                <h4>Your Subscriprions</h4>
+                <p>The services you have subscribed</p>
+                <div class="count"><i class="fa fa-bell"></i>10</div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card card-green">
+                <h4>Payments</h4>
+                <p>Pending Payments</p>
+                <div class="count"><i class="fa fa-credit-card"></i>20</div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card card-orange">
+                <h4>Notifications</h4>
+                <p>Notification from Administration</p>
+                <div class="count">30</div>
+              </div>
+            </div>
+          </div>
+       <!--Render Content here-->
+           <router-outlet></router-outlet>
+
+            <!--Render Content here-->
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+ 

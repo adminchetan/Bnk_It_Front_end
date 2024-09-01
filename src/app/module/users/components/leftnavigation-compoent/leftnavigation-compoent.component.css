@@ -1,0 +1,58 @@
+
+.left-nav {
+  width: 200px;
+  color: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  margin: 0 15px 0 15px;
+
+}
+.left-nav .nav-header {
+border-bottom: 2px solid rgb(255, 179, 57);
+  margin-top: 25px;
+  background-color: #ffffffd4;
+  width: 100%;  
+
+}
+.left-nav .nav-header h3{
+padding-left: 10px;  
+color: #ff0000;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+li{
+  list-style: none;
+}
+
+.fa{
+  color: rgb(104, 104, 104);
+}
+.left-nav .nav-links li a {
+  display: block;
+  padding: 10px 15px;
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.left-nav .nav-links li a:hover {
+  background-color: #ff2200c7;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.nav-links li:hover > a {
+  color: white; /* Change font color to white on hover */
+}
+
+.fa {
+  margin-right: 5px;
+}
+.left-nav .nav-links .nested-links {
+  display: none;
+  padding-left: 20px;
+}
+.left-nav .nav-links li:hover .nested-links {
+  display: block;
+}
+.left-nav .nav-links .nested-links li a {
+  padding: 5px 15px;
+  font-size: 14px;
+ 
+}

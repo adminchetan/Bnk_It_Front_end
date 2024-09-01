@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top mb-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span class="text-warning">Uttaraonline</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a [routerLink]="['/Index/Home']" fragment="Home-section" class="nav-link" ><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Index/Products']" fragment="product-section" class="nav-link"><i class="fas fa-box-open"></i> Request Product or Services</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Index/SignIn']"  fragment="login-section"   class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Index/SignUp']"   fragment="register-section"  class="nav-link"><i class="fas fa-user-plus"></i> Register</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Dashboard']" class="nav-link"><i class="fas fa-user-plus"></i> Dashboard</a>
+        </li>
+
+        <li class="nav-item">
+          <a  class="nav-link" href="#Contact"><i class="fas fa-user-plus"></i> Dashboard</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 ml-auto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</nav>

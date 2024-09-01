@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #343a40;
+  }
+  .navbar-brand span {
+    color: #ffc107;
+  }
+  .navbar-nav .nav-item .nav-link {
+    color: white;
+  }
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #ffc107;
+  }
+  .form-inline .btn {
+    background-color: #ffc107;
+    color: #343a40;
+  }
+  .form-inline .btn:hover {
+    background-color: #e0a800;
+  }
+  .mb-navbar {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
